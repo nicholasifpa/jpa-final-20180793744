@@ -13,12 +13,8 @@
 	</style>
 </h:head>
 <h:body>
-	<p:link outcome="cadastro-cliente" value="Voltar para Clientes" />
-	<br></br>
-    <p:panel header="Dados do Cliente">
-		Nome: <h:outputText value="#{param['clienteNome']}" /> <br></br>
-		Endereço: <h:outputText value="#{param['clienteEndereco']}" />
-	</p:panel>
+	<h:outputText value="#{param['cliNome']}" /> <br></br>
+	<h:outputText value="#{param['cliEnd']}" />
 	<h:form id="formulario">
 		<p:panel id="cadastroPanel" header="Cadastro de Pedidos">
 			<p:focus context="cadastroPanel"/>
@@ -43,7 +39,7 @@
 
 			<p:commandButton id="cadastrar" value="Cadastrar"
 				actionListener="#{pedidoMB.salvar}" style="margin:10px;" update="valorPedidos formulario listagem-pedidos" ajax="true">
-				<f:param name="clienteID" value="#{param['clienteID']}" />
+				<f:param name="clienteID" value="#{param['cliID']}" />
 			</p:commandButton>
     		<p:messages />
 			
