@@ -47,7 +47,7 @@
 		</p:panel>
 	</h:form>
 	<h:panelGroup id="valorPedidos">
-  		<h3><h:outputText style = "text-align: center;" value = "Total: R$#{pedidoMB.getValorPedidos()}"/></h3>
+  		<h3 style = "text-align: center;"><h:outputText value = "Total: R$#{pedidoMB.getValorPedidos()}"/></h3>
 	</h:panelGroup>
 	<h:form id="listagem-pedidos">
 	     <p:dataTable id="pedidosList" var="pedido" value="#{pedidoMB.getPedidos()}"  
